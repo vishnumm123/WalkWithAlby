@@ -404,7 +404,8 @@ video {
       margin-top: 2rem;
       object-fit: cover;
       justify-self: center;
-
+      border-radius: 200px;
+      
       // Media Query Breakpoint
       @media only screen and (min-width: 48rem) {
          order: 1;
