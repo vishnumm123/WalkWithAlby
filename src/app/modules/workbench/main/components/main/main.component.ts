@@ -30,7 +30,7 @@ export class MainComponent implements OnInit {
     console.log(making)
   }
 
-  get rateFormValid(){
+  get rateFormValid(){  
     return this.rateForm.valid;
   }
 
