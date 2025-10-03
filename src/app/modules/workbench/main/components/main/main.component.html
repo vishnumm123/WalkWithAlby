@@ -1,0 +1,47 @@
+<!-- <app-header></app-header>
+<div class="home">
+    <app-home></app-home>
+</div>
+<app-about-me></app-about-me>
+<app-latest-videos></app-latest-videos>
+<app-product-links></app-product-links> -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <form [formGroup]="rateForm">
+                <div>
+                    <h3>Rate Calculator</h3>
+                
+                    <div>
+                        <small>Rate (Today)</small>
+                        <input type="text" class="form-control" formControlName="currentRate">
+                    </div>
+                    <div>
+                        <small>Rate (Booking)</small>
+                        <input type="text" class="form-control" formControlName="bookingRate">
+                    </div>
+                    <div>
+                        <small>Gold Weight</small>
+                        <input type="text" class="form-control" formControlName="weight">
+                    </div>
+    
+                    <button [disabled]="!rateFormValid" (click)="calculateAmount()" class="btn btn-primary mt-3">Calculate</button>
+
+                    <br>
+                    
+                    <div class="mt-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6>making : 2.5%  </h6>
+                                <h6>GST : 3%</h6>
+                                <h6>Your Bill : {{billAmount}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
