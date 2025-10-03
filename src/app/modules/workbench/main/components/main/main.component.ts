@@ -22,8 +22,9 @@ export class MainComponent implements OnInit {
   }
 
   calculateAmount() {
-    let making = ((this.rateForm.value.currentRate * this.rateForm.value.weight) * 2.5) / 100;
-    let totalGoldRate = (this.rateForm.value.bookingRate * this.rateForm.value.weight) + making;
+    let weight_gm = (this.rateForm.value.weight/8)
+    let making = ((this.rateForm.value.currentRate * weight_gm) * 2.5) / 100;
+    let totalGoldRate = (this.rateForm.value.bookingRate * weight_gm) + making;
     let gst = (totalGoldRate * 3) / 100;
     let actualBill = totalGoldRate + gst;
     this.billAmount = actualBill;
