@@ -26,6 +26,11 @@
                         <small>Gold Weight (in gm)</small>
                         <input type="text" class="form-control" formControlName="weight">
                     </div>
+
+                    <div>
+                        <small>making (%)</small>
+                        <input type="text" class="form-control" formControlName="making">
+                    </div>
     
                     <button [disabled]="!rateFormValid" (click)="calculateAmount()" class="btn btn-primary mt-3">Calculate</button>
 
